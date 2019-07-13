@@ -1,0 +1,54 @@
+baseurl = "https://r-bloggers.netlify.com/"
+languageCode = "zh-CN"
+title = "R bloggers"
+theme = "hugo-xmag"
+googleAnalytics = "UA-115387038-1"
+disqusShortname = "xiangyun"
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+preserveTaxonomyNames = true
+footnotereturnlinkcontents = "↩"
+hasCJKLanguage = true
+enableEmoji = true
+paginate = 9
+
+[permalinks]
+    post = "/post/:year/:month/:day/:slug/"
+
+[[menu.main]]
+    name = "主页"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 2
+[[menu.main]]
+    name = "类别"
+    url = "/categories/"
+    weight = 3
+[[menu.main]]
+    name = "标签"
+    url = "/tags/"
+    weight = 4
+[[menu.main]]
+    name = "订阅"
+    url = "/index.xml"
+[[menu.main]]
+    name = "文章"
+    url = "/archives/"
+    weight = 5
+
+[params]
+    description = "网站由 Hugo 和 blogdown 强力驱动"
+    summary_length = 200
+    github_edit = "https://github.com/XiangyunHuang/r-bloggers/edit/master/content/"
+    footer = "&copy; [Xiangyun Huang](https://r-bloggers.netlify.com/) 2016 - 2019 | [Github](https://github.com/XiangyunHuang) | [推特](https://twitter.com/StatCloud) | [爆栈网](https://stackoverflow.com/users/8278176) | [新浪微博](https://weibo.com/Cloud2016)"
+
+[params.text]
+    back = "&larr; 回到主页"
+    edit = "编辑页面 &rarr;"
+    truncated = "&hellip;"
+    tags = "关键词："
+    uncategorized = "未分类"
+    title_categories = "栏目分类"
+    title_tags = "关键词列表"

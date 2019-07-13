@@ -10,6 +10,13 @@
     {{ partial "head_custom.html" . }}
   </head>
 
+    <link rel="shortcut icon" href="{{ "img/logo.ico" | relURL }}">
+
+    {{ with .Site.Params.favicon }}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ . | relURL }}">
+    <link rel="icon" type="image/x-icon" href="{{ . | relURL }}">
+    {{ end }}
+
   <body{{if .IsPage}} class="page"{{ end }}>
     <nav class="header">
       {{ partial "banner.html" . }}

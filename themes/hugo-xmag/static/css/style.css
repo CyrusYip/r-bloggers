@@ -123,7 +123,14 @@ pre code {
 }
 
 /* misc elements */
-img, iframe, video { max-width: 100%; }
+img, video { 
+  max-width: 65%; 
+  height: auto;
+}
+iframe { 
+  max-width: 100%; 
+}
+
 blockquote {
   background: #f9f9f9;
   border-left: 5px solid #ccc;
@@ -148,6 +155,7 @@ tr:nth-child(even) { background: #eee }
   box-shadow: 0 0 8px #666;
 }
 .thumbnail img {
+  max-width: 100%;
   width: 100%;
   height: 100%;
   object-fit: cover;

@@ -28,6 +28,13 @@ vignettes/*.pdf
 /*_cache/
 /cache/
 
+/content/post/*_cache/
+/content/post/cache/
+/content/post/*_figure/
+
+/static/rmd/*_cache/
+/static/rmd/*_figure/
+
 # Temporary files created by R markdown
 *.utf8.md
 *.knit.md
