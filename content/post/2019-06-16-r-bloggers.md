@@ -148,7 +148,7 @@ description: "个人博客列表大合集，内容上是有偏的，R语言方�
 |杜雨                          |https://github.com/ljtyduyu                           |
 |钟浩光                        |http://www.zhonghaoguang.com/                         |
 |陈皓                          |https://coolshell.cn                                  |
-
+|谭显英                        |https://shrektan.com/                                 |
 
 # 博客聚合
 
