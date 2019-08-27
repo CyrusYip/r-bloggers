@@ -26,14 +26,14 @@ $$`
 
 `$$
 \begin{align}
-\Gamma(\alpha + 1) &= \int_{0}^{\infty} t^{\alpha}e^{-t}dt \\
-&= t^{\alpha}(-e^{-t})|_{0}^{\infty} - \int_{0}^{\infty}(-e^{-t})(\alpha t^{\alpha-1}dt) \\
-&= (0-0) + \alpha \int_{0}^{\infty}t^{\alpha-1}e^{-t}dt \\
-&= \alpha\Gamma(\alpha)
-\end{align}
+\Gamma(\alpha + 1) &= \int_{0}^{\infty} t^{\alpha}e^{-t}dt \notag\\
+&= t^{\alpha}(-e^{-t})|_{0}^{\infty} - \int_{0}^{\infty}(-e^{-t})(\alpha t^{\alpha-1}dt) \notag\\
+&= (0-0) + \alpha \int_{0}^{\infty}t^{\alpha-1}e^{-t}dt \notag\\
+&= \alpha\Gamma(\alpha) \notag
+\end{align} \tag{1}
 $$`
 
-我们容易验证 `$\Gamma(1) = \int_{0}^{\infty}e^{-t} = 1$`，而且 `$\Gamma(2) = 1 \times \Gamma(1) = 1$`，`$\Gamma(3) = 2\Gamma(2) = 2$`，更一般地，`$\Gamma(k+1) = k!$`，对任意正整数都成立。当 `$\alpha \leq 0$` 时，`$\Gamma(\alpha)$` 趋于 `$\infty$` 要求更多数学工具才能计算。而取有理数时， `$\Gamma(1/2) = \sqrt{\pi}$`
+公式 (1) 我们容易验证 `$\Gamma(1) = \int_{0}^{\infty}e^{-t} = 1$`，而且 `$\Gamma(2) = 1 \times \Gamma(1) = 1$`，`$\Gamma(3) = 2\Gamma(2) = 2$`，更一般地，`$\Gamma(k+1) = k!$`，对任意正整数都成立。当 `$\alpha \leq 0$` 时，`$\Gamma(\alpha)$` 趋于 `$\infty$` 要求更多数学工具才能计算。而取有理数时， `$\Gamma(1/2) = \sqrt{\pi}$`
 
 当 `$\alpha$` 趋于无穷时，根据 Stirling 公式
 
