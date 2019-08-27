@@ -23,7 +23,6 @@ description: "个人博客列表大合集，内容上是有偏的，R语言方�
 |Brodie Gaslam                 |https://www.brodieg.com/                              |
 |Michael W. Kearney            |https://mikewk.com/                                   |
 |Paul Murrell                  |https://www.stat.auckland.ac.nz/~paul/                |
-|朱昊                          |https://zhuhao.org/                                   |
 |Jim Hester                    |https://www.jimhester.com/                            |
 |Julia Silge                   |https://juliasilge.com/                               |
 |Carl Boettiger                |https://www.carlboettiger.info/                       |
@@ -40,7 +39,6 @@ description: "个人博客列表大合集，内容上是有偏的，R语言方�
 |L. Collado-Torres             |https://lcolladotor.github.io/                        |
 |Andrew Lawson                 |http://people.musc.edu/~abl6/                         |
 |Jozef Hajnala                 |https://jozef.io/                                     |
-|赵鹏                          |http://www.parallelr.com/                             |
 |Roger Bivand                  |https://www.nhh.no/en/employees/faculty/roger-bivand/ |
 |John Fox                      |https://socialsciences.mcmaster.ca/jfox/              |
 |Dirk Eddelbuettel             |http://dirk.eddelbuettel.com/                         |
@@ -61,7 +59,6 @@ description: "个人博客列表大合集，内容上是有偏的，R语言方�
 |Julie Josse                   |http://juliejosse.com/                                |
 |François Husson               |https://husson.github.io/                             |
 |Erik-Jan van Kesteren         |https://erikjanvankesteren.nl/                        |
-|杨志飞                        |https://zhifei.me/                                    |
 |Lei Chen                      |https://herechen.github.io/                           |
 |Andor Chen                    |https://about.ac/                                     |
 |Andrew Ba Tran                |https://learn.r-journalism.com/en/                    |
@@ -77,7 +74,6 @@ description: "个人博客列表大合集，内容上是有偏的，R语言方�
 |Bruno Rodrigues               |https://www.brodrigues.co/                            |
 |Cartesian Faith               |https://cartesianfaith.com/                           |
 |Patrick Burns                 |https://www.burns-stat.com/                           |
-|夏骁凯                        |http://xiaokai.me/                                    |
 |Gianluca Baio                 |http://www.statistica.it/gianluca/                    |
 |Omiros                        |http://www.econ.upf.edu/~omiros/                      |
 |Yoonseo Zoh                   |https://zohyos7.github.io/                            |
@@ -149,6 +145,12 @@ description: "个人博客列表大合集，内容上是有偏的，R语言方�
 |钟浩光                        |http://www.zhonghaoguang.com/                         |
 |陈皓                          |https://coolshell.cn                                  |
 |谭显英                        |https://shrektan.com/                                 |
+|谢士晨                        |http://shichen.name/                                  |
+|夏骁凯                        |http://xiaokai.me/                                    |
+|杨志飞                        |https://zhifei.me/                                    |
+|赵鹏                          |http://www.parallelr.com/                             |
+|朱昊                          |https://zhuhao.org/                                   |
+
 
 # 博客聚合
 
