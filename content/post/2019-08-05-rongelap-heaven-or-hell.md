@@ -508,6 +508,30 @@ convergence, R_hat=1).
 R 语言方案
 
 ```r
+# 无空间效应
+fit <- glm(rongelap$data ~ 1, family = poisson(link = "log"), offset = log(rongelap$units.m))
+fit
+```
+```
+
+Call:  glm(formula = rongelap$data ~ 1, family = poisson(link = "log"), 
+    offset = log(rongelap$units.m))
+
+Coefficients:
+(Intercept)  
+      2.014  
+
+Degrees of Freedom: 156 Total (i.e. Null);  156 Residual
+Null Deviance:      61570 
+Residual Deviance: 61570        AIC: 63090
+```
+
+> 注意
+> 
+> 不能将响应变量设为 `rongelap$data/log(rongelap$units.m)` 因为 `family = poisson(link = "log")` 的时候，响应变量只能放正整数！
+
+
+```r
 # 不收敛
 library(MASS)
 rongelap$dummary <- 1:157
