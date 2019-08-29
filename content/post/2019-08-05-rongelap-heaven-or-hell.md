@@ -300,8 +300,8 @@ dev.off()
 
 `$$
 \begin{align}
-\log\{t(x_{i})\lambda(x_i)\} & =  \beta + S(x_{i}) \\
-\log\{t(x_{i})\lambda(x_i)\} & =  \beta + S(x_{i}) + Z_{i}
+\log\{\lambda(x_i)\} & =  \beta + S(x_{i}) \\
+\log\{\lambda(x_i)\} & =  \beta + S(x_{i}) + Z_{i}
 \end{align}
 $$`
 
