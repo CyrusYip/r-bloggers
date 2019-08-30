@@ -11,6 +11,7 @@ tags:
   - 广义线性模型
   - 二项分布
   - 高斯过程
+draft: true
 ---
 
 盘尾丝虫病是由一种可致盲的热带疾病，非洲盘尾丝虫病控制项目 APOC (African Programme for Onchocerciasis Control) 搜集了 `$N=168$` 个村庄的 `$M = 21938$` 个血液样本，每个村庄抽取的样本量为`$m_i=\mathrm{NO\_EXAM}$`，其中感染了的 NO_INF 人， 在该村庄（坐标 `$x_i$`）观察到的感染比例 `$p(x_i) = \mathrm{NO\_INF/NO\_EXAM}$` ， 在村庄 1 公里的范围内添加了周围环境的指标，有从美国地质调查局获得的海拔信息 ELEVATION (<https://www.usgs.gov/>) 和卫星在 1999 年至 2001 年间测得的植被绿色度数据 NDVI (<http://free.vgt.vito.be>)，NDVI 分四个指标， 分别是所有 NDVI 的平均值 MEAN9901，最大值 MAX9901，最小值 MIN9901，标准差 STDEV9901。 样本采集的区域如图所示
