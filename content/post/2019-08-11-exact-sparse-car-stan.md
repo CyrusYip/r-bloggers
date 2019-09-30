@@ -12,7 +12,7 @@ tags:
 description: "本文详细描述稀疏条件自回归模型的精确推断及其 Stan 实现，是稀疏条件自回归模型的近似推断的姊妹篇。稀疏表示可以获得数量级的效率优势，对于大型空间数据集有更好的扩展性"
 ---
 
-> 本文翻译自 Max Joseph 的 [Exact sparse CAR models in Stan](https://github.com/mbjoseph/CARstan)，代码已做了大量现代化改进，以期在未来5年内不会变动
+> 本文翻译自 Max Joseph 的 [Exact sparse CAR models in Stan](https://mc-stan.org/users/documentation/case-studies/mbjoseph-CARStan.html) 相关代码和数据见 <https://github.com/mbjoseph/CARstan>，本文代码已做了大量现代化改进，以期在未来5年内不会变动。
 
 本文详细描述稀疏条件自回归模型的精确推断及其 Stan 实现，是稀疏条件自回归模型的近似推断的姊妹篇。稀疏表示似乎可以获得数量级的效率优势，对于大型空间数据集有更好的扩展性
 
