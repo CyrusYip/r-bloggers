@@ -1,0 +1,496 @@
+---
+title: "Car Evaluation Analysis 翻译：汽车评估分析"
+author: "黄湘云"
+date: "2019-10-02"
+categories:
+  - 统计模型
+tags:
+  - 统计学习
+slug: car-eval-analysis
+---
+
+> 本文翻译自 Suraj Vidyadaran 的 <https://github.com/surajvv12/17_Classification>
+
+# 1) Load the data 加载数据
+
+```{r}
+car_eval <- read.csv("../../data/car.data.txt", header = FALSE, stringsAsFactors = TRUE)
+colnames(car_eval) <- c("buying", "maint", "doors", "persons", 
+                        "lug_boot", "safety", "class")
+head(car_eval)
+```
+
+# 2) Exploratory Data Analysis 探索性数据分析
+
+```{r}
+summary(car_eval)
+str(car_eval)
+```
+
+各个字段都没有缺失，太好了！
+
+```{r}
+DataExplorer::plot_missing(car_eval)
+```
+
+7 个字段都是类别型的
+
+```{r}
+DataExplorer::plot_intro(car_eval)
+```
+
+# 3) Classification Analysis 分类分析
+
+## A) Linear Classification 线性分类
+
+### 1) Logistic Regression 逻辑回归
+
+```{r,message=FALSE,warning=FALSE}
+library(VGAM)
+
+# Build the model 创建模型
+model1 <- vglm(class ~ buying + maint + doors + persons + lug_boot + safety, 
+               family = "multinomial", data = car_eval)
+
+# Summarize the model 模型输出
+summary(model1)
+```
+
+
+```{r,message=FALSE}
+# Predict using the model 模型预测
+x <- car_eval[, 1:6]
+y <- car_eval[, 7]
+probability <- predict(model1, x, type = "response")
+car_eval$pred_log_reg <- apply(probability, 1, which.max)
+
+car_eval$pred_log_reg[which(car_eval$pred_log_reg == "1")] <- levels(car_eval$class)[1]
+car_eval$pred_log_reg[which(car_eval$pred_log_reg == "2")] <- levels(car_eval$class)[2]
+car_eval$pred_log_reg[which(car_eval$pred_log_reg == "3")] <- levels(car_eval$class)[3]
+car_eval$pred_log_reg[which(car_eval$pred_log_reg == "4")] <- levels(car_eval$class)[4]
+```
+
+
+```{r,message=FALSE}
+# Accuracy of the model 模型表现
+mtab <- table(car_eval$pred_log_reg, car_eval$class)
+library(caret)
+confusionMatrix(mtab)
+```
+
+### 2) Linear Discriminant Analysis 线性判别分析
+
+```{r}
+library(MASS)
+
+# Build the model
+model2 <- lda(class ~ buying + maint + doors + persons + lug_boot + safety,
+              data = car_eval)
+
+# Summarize the model
+summary(model2)
+```
+
+
+```{r}
+# Predict using the model
+car_eval$pred_lda <- predict(model2, x)$class
+```
+
+
+```{r}
+# Accuracy of the model
+mtab <- table(car_eval$pred_lda, car_eval$class)
+confusionMatrix(mtab)
+```
+
+## B) Non-Linear Classification 非线性分类
+
+### 1) Mixture Discriminant Analysis 混合判别分析
+
+```{r,warning=FALSE,message=FALSE}
+library(mda)
+
+# Build the model
+model3 <- mda(class ~ buying + maint + doors + persons + lug_boot + safety, 
+              data = car_eval)
+
+# Summarize the model
+summary(model3)
+```
+
+
+```{r,warning=FALSE,message=FALSE}
+# Predict using the model
+car_eval$pred_mda <- predict(model3, x)
+```
+
+
+```{r,warning=FALSE,message=FALSE}
+# Accuracy of the model
+mtab <- table(car_eval$pred_mda, car_eval$class)
+confusionMatrix(mtab)
+```
+
+### 2) Quadratic Discriminant Analysis 二次判别分析
+
+```{r,eval=FALSE}
+library(MASS)
+# Build the model
+model4 <- qda(class ~ buying + maint + doors + persons + lug_boot + safety, 
+              data = car_eval)
+
+# Summarize the model
+summary(model4)
+```
+
+
+```{r,eval=FALSE}
+# Predict using the model
+car_eval$pred_qda <- predict(model4, x)
+```
+
+
+```{r,eval=FALSE}
+# Accuracy of the model
+mtab <- table(car_eval$pred_qda, car_eval$class)
+confusionMatrix(mtab)
+````
+
+### 3) Regularized Discriminant Analysis 正则判别分析
+
+````{r,warning=FALSE,message=FALSE}
+library(klaR)
+
+# Build the model
+model5 <- rda(class ~ buying + maint + doors + persons + lug_boot + safety, 
+              data = car_eval, gamma = 0.05, lambda = 0.01)
+
+# Summarize the model
+summary(model5)
+```
+
+
+````{r,warning=FALSE,message=FALSE}
+# Predict using the model
+car_eval$pred_rda <- predict(model5, x)$class
+```
+
+
+````{r,warning=FALSE,message=FALSE}
+# Accuracy of the model
+mtab <- table(car_eval$pred_rda, car_eval$class)
+confusionMatrix(mtab)
+```
+
+### 4) Neural Network 神经网络
+
+```{r,message=FALSE}
+library(nnet)
+
+# Build the model
+model6 <- nnet(class ~ buying + maint + doors + persons + lug_boot + safety, 
+               data = car_eval, size = 4, decay = 0.0001, maxit = 500)
+
+# Summarize the model
+summary(model6)
+```
+
+
+```{r}
+# Predict using the model
+car_eval$pred_nnet <- predict(model6, x, type = "class")
+```
+
+
+```{r}
+# Accuracy of the model
+mtab <- table(car_eval$pred_nnet, car_eval$class)
+confusionMatrix(mtab)
+```
+
+### 5) Flexible Discriminant Analysis 灵活判别分析
+
+```{r}
+library(mda)
+
+# Build the model
+model7 <- fda(class ~ buying + maint + doors + persons + lug_boot + safety, 
+              data = car_eval)
+
+# Summarize the model
+summary(model7)
+```
+
+
+```{r}
+# Predict using the model
+car_eval$pred_fda <- predict(model7, x, type = "class")
+```
+
+
+```{r}
+# Accuracy of the model
+mtab <- table(car_eval$pred_fda, car_eval$class)
+confusionMatrix(mtab)
+```
+
+### 6) Support Vector Machine 支持向量机
+
+```{r}
+library(kernlab)
+
+# Build the model
+model8 <- ksvm(class ~ buying + maint + doors + persons + lug_boot + safety, 
+               data = car_eval)
+
+# Summarize the model
+summary(model8)
+```
+
+
+```{r}
+# Predict using the model
+car_eval$pred_svm <- predict(model8, x, type = "response")
+```
+
+
+```{r}
+# Accuracy of the model
+mtab <- table(car_eval$pred_svm, car_eval$class)
+confusionMatrix(mtab)
+```
+
+### 7) k-Nearest Neighbors K 近邻
+
+```{r}
+library(caret)
+
+# Build the model
+model9 <- knn3(class ~ buying + maint + doors + persons + lug_boot + safety,
+               data = car_eval, k = 5)
+
+# Summarize the model
+summary(model9)
+```
+
+
+```{r}
+# Predict using the model
+car_eval$pred_knn <- predict(model9, x, type = "class")
+```
+
+
+```{r}
+# Accuracy of the model
+mtab <- table(car_eval$pred_knn, car_eval$class)
+confusionMatrix(mtab)
+```
+
+### 8) Naive Bayes 朴素贝叶斯
+
+```{r}
+library(e1071)
+
+# Build the model
+model10 <- naiveBayes(class ~ buying + maint + doors + persons + lug_boot + safety, 
+                      data = car_eval, k = 5)
+
+# Summarize the model
+summary(model10)
+```
+
+
+```{r}
+# Predict using the model
+car_eval$pred_naive <- predict(model10, x)
+```
+
+
+```{r}
+# Accuracy of the model
+mtab <- table(car_eval$pred_naive, car_eval$class)
+confusionMatrix(mtab)
+```
+
+## C) Non-Linear Classification with Decision Trees 非线性分类之决策树
+
+### 1) Classification and Regression Trees(CART) 分类回归树
+
+```{r}
+library(rpart)
+
+# Build the model
+model11 <- rpart(class ~ buying + maint + doors + persons + lug_boot + safety, 
+                 data = car_eval)
+
+# Summarize the model
+# summary(model11)
+```
+
+
+```{r}
+# Predict using the model
+car_eval$pred_cart <- predict(model11, x, type = "class")
+```
+
+
+```{r}
+# Accuracy of the model
+mtab <- table(car_eval$pred_cart, car_eval$class)
+confusionMatrix(mtab)
+```
+
+### 2) C4.5
+
+```{r}
+library(RWeka)
+
+# Build the model
+model12 <- J48(class ~ buying + maint + doors + persons + lug_boot + safety, 
+               data = car_eval)
+
+# Summarize the model
+summary(model12)
+```
+
+
+```{r}
+# Predict using the model
+car_eval$pred_c45 <- predict(model12, x)
+
+# Accuracy of the model
+mtab <- table(car_eval$pred_c45, car_eval$class)
+confusionMatrix(mtab)
+```
+
+### 3) PART
+
+```{r}
+library(RWeka)
+
+# Build the model
+model13 <- PART(class ~ buying + maint + doors + persons + lug_boot + safety,
+                data = car_eval)
+
+# Summarize the model
+summary(model13)
+```
+
+
+```{r}
+# Predict using the model
+car_eval$pred_part <- predict(model13, x)
+```
+
+
+```{r}
+# Accuracy of the model
+mtab <- table(car_eval$pred_part, car_eval$class)
+confusionMatrix(mtab)
+```
+
+### 4) Bagging CART 装袋 CART
+
+```{r}
+library(ipred)
+
+# Build the model
+model14 <- bagging(class ~ buying + maint + doors + persons + lug_boot + safety, 
+                   data = car_eval)
+
+# Summarize the model
+# summary(model14)
+```
+
+
+```{r}
+# Predict using the model
+car_eval$pred_bagging <- predict(model14, x)
+```
+
+
+```{r}
+# Accuracy of the model
+mtab <- table(car_eval$pred_bagging, car_eval$class)
+confusionMatrix(mtab)
+```
+
+### 5) Random Forest 随机森林
+
+```{r}
+library(randomForest)
+
+# Build the model
+model15 <- randomForest(class ~ buying + maint + doors + persons + lug_boot + safety, 
+                        data = car_eval)
+
+# Summarize the model
+summary(model15)
+```
+
+
+```{r}
+# Predict using the model
+car_eval$pred_randomforest <- predict(model15, x)
+
+# Accuracy of the model
+mtab <- table(car_eval$pred_randomforest, car_eval$class)
+confusionMatrix(mtab)
+```
+
+### 6) Gradient Boosted Machine 梯度提升机
+
+```{r}
+library(gbm)
+
+# Build the model
+model16 <- gbm(class ~ buying + maint + doors + persons + lug_boot + safety, 
+               data = car_eval, distribution = "multinomial")
+
+# Summarize the model
+summary(model16)
+```
+
+
+```{r}
+# Predict using the model
+probability <- predict(model16, x, n.trees = 1)
+car_eval$pred_gbm <- colnames(probability)[apply(probability, 1, which.max)]
+
+# Accuracy of the model
+mtab <- table(car_eval$pred_gbm, car_eval$class)
+mtab
+```
+
+### 7) Boosted C5.0 提升 C5.0
+
+```{r}
+library(C50)
+
+# Build the model
+model17 <- C5.0(class ~ buying + maint + doors + persons + lug_boot + safety, 
+                data = car_eval, trials = 10)
+
+# Summarize the model
+# summary(model17)
+```
+
+
+```{r}
+# Predict using the model
+car_eval$pred_c50 <- predict(model17, x)
+
+# Accuracy of the model
+mtab <- table(car_eval$pred_c50, car_eval$class)
+confusionMatrix(mtab)
+```
+
+# 4) Session Information 软件信息
+
+运行上述算法，需要的 R 包和软件环境如下：
+
+```{r}
+xfun::session_info()
+```
+
