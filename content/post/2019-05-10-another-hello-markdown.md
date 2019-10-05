@@ -232,14 +232,15 @@ Pandoc 还支持插入全宽图形，并且交叉引用 `\@ref(fig:r-logo)`
 
 <iframe frameborder="0" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=188459&auto=0&height=66"></iframe>
 
-戴荃的悟空还是不能播放
+戴荃的悟空能播放
 
-<iframe frameborder="0" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=36229055&auto=0&height=66"></iframe>
+<iframe frameborder="0" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=33162226&auto=0&height=66"></iframe>
 
-终于有霍尊的卷珠帘可以播放
+霍尊的卷珠帘可以播放
 
 <iframe frameborder="0" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=32063039&auto=0&height=66"></iframe>
 
+更多可以播放的音乐，去网站搜索 <https://music.liuzhijin.cn/>
 
 ## 2.6 插入视频 {#video}
 
@@ -307,19 +308,15 @@ Trevor Hastie 在演讲 Gradient Boosting Machine Learning
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/b4vYUBjjukL2Sm" width="960" height="700" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/ocampesato/introduction-to-tensorflow-2" title="Introduction to TensorFlow 2" target="_blank">Introduction to TensorFlow 2</a> </strong> from <strong><a href="https://www.slideshare.net/ocampesato" target="_blank">Oswald Campesato</a></strong> </div>
 
-除了从网站插入幻灯片，还支持直接插入 xaringan 制作的幻灯片，下面是我在2019年中国R语言大会（北京）上的幻灯片，也是创建本博客的技术栈。blogdown 出来已经有两年了，很多人使用它创建了自己的博客，统计之都主站是最早使用这套工具的，这次分享以现场操作为主。[^notes]
+除了从网站插入幻灯片，还支持直接插入 xaringan 制作的幻灯片，下面是我在2019年中国R语言大会（北京）上的幻灯片，也是创建本博客的技术栈。blogdown 出来已经有两年了，很多人使用它创建了自己的博客，统计之都主站是最早使用这套工具的，这次分享以现场操作为主。
 
 <iframe src="//wp-contents.netlify.com/talks/2019-chinar12th-cos-blogdown" width="960" height="700" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-PDF 格式文档也是可以插入的，比如 beamer 制作的幻灯片，当年的开题报告
-
-<iframe src="//wp-contents.netlify.com/talks/proposal.pdf" width="800" height="600" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-2016 年我去北大听 Cuihui Zhang 教授的高维线性模型，他人非常 nice，分享了他的幻灯片[^hlm]
+PDF 格式文档也是可以插入的，比如 beamer 制作的幻灯片，2016 年我去北大听 Cuihui Zhang 教授的高维线性模型，他人非常 nice，分享了他的幻灯片[^hlm]
 
 <iframe src="//wp-contents.netlify.com/talks/Cunhui-Zhang16-Beida.pdf" width="800" height="600" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-[^notes]: 我的报告给完后的第二天，演示用的博客域名和图床域名都给占了
+
 [^hlm]: 这个课内容非常高深，听不大懂，但是知道个轮廓，感受下高维统计方向的研究前沿
 
 ## 2.8 插入列表 {#list}
