@@ -224,24 +224,24 @@ Pandoc 还支持插入全宽图形，并且交叉引用 `\@ref(fig:r-logo)`
 
 <iframe frameborder="0" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=34341360&auto=0&height=66"></iframe>
 
-网易云音乐有些歌不能生成外链播放器，插入了也不能播放
+陈慧娴版《千千阙歌》
 
-<iframe frameborder="0" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=212233&auto=0&height=66"></iframe>
+<iframe frameborder="0" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=5244310&auto=0&height=66"></iframe>
 
-张国荣版千千阙歌也不能外链播放
+张国荣版《千千阙歌》
 
-<iframe frameborder="0" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=188459&auto=0&height=66"></iframe>
+<iframe frameborder="0" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=34341388&auto=0&height=66"></iframe>
 
 
 > 你不觉得天边的晚霞很美吗？只有看着她，我才能坚持向西走。
 > --- 《悟空传》  
 
 
-戴荃的悟空能播放
+戴荃的《悟空》
 
 <iframe frameborder="0" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=33162226&auto=0&height=66"></iframe>
 
-霍尊的卷珠帘可以播放
+霍尊的《卷珠帘》
 
 <iframe frameborder="0" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=32063039&auto=0&height=66"></iframe>
 
@@ -263,35 +263,20 @@ Rick Becker 在 2016 年国际 R 语言大会上的演讲 --- Forty Years of S
 
 > It’s just serendipity that I ended up in statistics.
 
-Trevor Hastie 和 Rob Tibshirani 在课程 [An Introduction to Statistical Learning with Applications in R](https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/) 上采访 [Bradley Efron](https://en.wikipedia.org/wiki/Bradley_Efron) 
 
-<iframe width="960" height="440" src="https://www.youtube.com/embed/6l9V1sINzhE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Trevor Hastie 和 Rob Tibshirani 在采访 [John Chambers](https://statweb.stanford.edu/~jmc4/)
-
-<iframe width="960" height="440" src="https://www.youtube.com/embed/jk9S3RTAl38" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Trevor Hastie 和 Rob Tibshirani 在采访 [Jerome Friedman](https://statweb.stanford.edu/~jhf/)
-
-<iframe width="960" height="440" src="https://www.youtube.com/embed/79tR7BvYE6w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-统计之都海外沙龙第8期： [陈天奇](https://tqchen.com/)、 [何通](https://github.com/hetong007)、 [邱怡轩](https://statr.me/) xgboost
+统计之都海外沙龙第8期： [陈天奇](https://tqchen.com/)、 [何通](https://github.com/hetong007)、 [邱怡轩](https://statr.me/) 在聊 xgboost 统计软件奖背后的故事
 
 <iframe width="960" height="600" src="https://player.bilibili.com/player.html?aid=4018491&cid=6479840&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-统计之都海外沙龙第26期：在谷歌、微软、Facebook搬砖之感受
+统计之都海外沙龙第26期：在谷歌、微软、Facebook 搬砖之感受
 
 <iframe width="960" height="600" src="//player.bilibili.com/player.html?aid=15256742&cid=24831259&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-Trevor Hastie 在演讲 Gradient Boosting Machine Learning
-
-<iframe width="960" height="440" src="https://www.youtube.com/embed/wPqtzj5VZus" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 北京出租车的运行轨迹
 
 <iframe src='https://gfycat.com/ifr/PartialMadeupAustraliancurlew' frameborder='0' scrolling='no' allowfullscreen width="800" height="600"></iframe>
 
-腾讯视频
+插入腾讯视频
 
 <iframe width="800" height="600" frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=s0392uw1zzj" allowFullScreen="true"></iframe>
 
