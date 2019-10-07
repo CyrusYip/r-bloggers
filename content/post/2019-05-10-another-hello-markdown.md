@@ -232,6 +232,11 @@ Pandoc 还支持插入全宽图形，并且交叉引用 `\@ref(fig:r-logo)`
 
 <iframe frameborder="0" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=188459&auto=0&height=66"></iframe>
 
+
+> 你不觉得天边的晚霞很美吗？只有看着她，我才能坚持向西走。
+> --- 《悟空传》  
+
+
 戴荃的悟空能播放
 
 <iframe frameborder="0" marginwidth="0" marginheight="0" width=400 height=80 src="https://music.163.com/outchain/player?type=2&id=33162226&auto=0&height=66"></iframe>
