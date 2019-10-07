@@ -294,10 +294,6 @@ Rick Becker 在 2016 年国际 R 语言大会上的演讲 --- Forty Years of S
 
 <iframe src="//slides.com/hafen/trelliscopejs-lightning/embed" width="960" height="700" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-插入来自 [slideshare](https://www.slideshare.net) 的幻灯片 Introduction to TensorFlow 2 
-
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/b4vYUBjjukL2Sm" width="960" height="700" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/ocampesato/introduction-to-tensorflow-2" title="Introduction to TensorFlow 2" target="_blank">Introduction to TensorFlow 2</a> </strong> from <strong><a href="https://www.slideshare.net/ocampesato" target="_blank">Oswald Campesato</a></strong> </div>
-
 除了从网站插入幻灯片，还支持直接插入 xaringan 制作的幻灯片，下面是我在2019年中国R语言大会（北京）上的幻灯片，也是创建本博客的技术栈。blogdown 出来已经有两年了，很多人使用它创建了自己的博客，统计之都主站是最早使用这套工具的，这次分享以现场操作为主。
 
 <iframe src="//wp-contents.netlify.com/talks/2019-chinar12th-cos-blogdown" width="960" height="700" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
