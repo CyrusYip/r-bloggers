@@ -116,6 +116,7 @@ description: "个人博客列表大合集，内容上是有偏的，R语言方�
 |Ilya Kashnitsky               |https://ikashnitsky.github.io/                        |
 |Shirin Glander                |https://shirinsplayground.netlify.com/                |
 |Jeff Pollock                  |https://jeffpollock9.github.io/                       |
+|Tristan Mahr                  |https://www.tjmahr.com/                               |
 |邱怡轩                        |https://statr.me/                                     |
 |杨洵默                        |https://tcya.xyz/                                     |
 |杜亚蕾                        |http://yalei.name/                                    |
@@ -150,6 +151,8 @@ description: "个人博客列表大合集，内容上是有偏的，R语言方�
 |杨志飞                        |https://zhifei.me/                                    |
 |赵鹏                          |http://www.parallelr.com/                             |
 |朱昊                          |https://zhuhao.org/                                   |
+|Jiang Jun                     |https://jiangjun.netlify.com/                         |
+|彭浩                          |https://haopen.github.io/                             |
 
 
 # 博客聚合
