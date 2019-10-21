@@ -240,6 +240,9 @@ description: "书单覆盖机器学习、统计图形、数据科学与R语言�
 
 1. R 语言实现李航《统计学习方法》中的所有算法 <https://bookdown.org/lyuchengrui/statisticallearningmethods/>
 
+1. Mathematics for Machine Learning <https://mml-book.github.io/> [PDF下载](https://mml-book.github.io/book/mml-book.pdf)
+
+
 # 8. 学习 Python
 
 - [简明 Python 教程](https://bop.mol.uno/) 即 [A Byte of Python](https://python.swaroopch.com/) 的中文版
