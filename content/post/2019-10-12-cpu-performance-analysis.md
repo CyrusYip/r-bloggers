@@ -12,6 +12,7 @@ toc: yes
 ---
 
 > 本文翻译自 Suraj Vidyadaran 的 <https://github.com/surajvv12/cpu_performance>
+> MASS 包中的数据集 cpus 描述 A relative performance measure and characteristics of 209 CPUs.
 
 # 数据集描述
 
