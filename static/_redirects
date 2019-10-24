@@ -3,3 +3,5 @@
 # Optional: Redirect default Netlify subdomain to primary domain
 https://r-bloggers.netlify.com/* https://www.xiangyunhuang.com.cn/:splat 301!
 http://r-bloggers.netlify.com/* https://www.xiangyunhuang.com.cn/:splat 301!
+
+/post/:year/:month/:day/:slug/     /:year/:month/:slug/ 
