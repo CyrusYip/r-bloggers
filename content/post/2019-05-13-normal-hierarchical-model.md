@@ -132,6 +132,7 @@ iter = 1000 # 样本量
 接着设置模型参数初始值，每条链开始迭代的初值值都一样，这里选用 WinBUGS 给的初始值，后续我们还考虑随机选择的初始值与之比较
 
 ```r
+# 复制 list 的姿势 https://d.cosx.org/d/420668
 init <- rep(list(list(
   alpha = rep(250, 30), beta = rep(6, 30),
   alpha_c = 150, beta_c = 10,

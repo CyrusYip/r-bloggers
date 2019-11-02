@@ -165,6 +165,11 @@ model {
   for (n in 1:N)
     y[n] ~ bernoulli(theta);
 }
+// 向量化模型块
+model {
+  theta ~ beta(1,1);  // uniform prior on interval 0,1
+  y ~ bernoulli(theta);
+}
 ```
 
 编译 CmdStan 自带的推断伯努利分布的参数的例子，首先将 `bernoulli.stan` 文件翻译成 C++ 文件，然后编译成可执行文件 `bernoulli`

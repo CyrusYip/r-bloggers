@@ -149,6 +149,7 @@ description: "个人博客列表大合集，内容上是有偏的，R语言方�
 |谢士晨                        |http://shichen.name/                                  |
 |夏骁凯                        |http://xiaokai.me/                                    |
 |杨志飞                        |https://zhifei.me/                                    |
+|李家翔                        |https://jiaxiangli.netlify.com/                       |
 |赵鹏                          |http://www.parallelr.com/                             |
 |朱昊                          |https://zhuhao.org/                                   |
 |Jiang Jun                     |https://jiangjun.netlify.com/                         |

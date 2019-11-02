@@ -34,7 +34,7 @@ author: 黄湘云
 
 - [统计软件安装和使用笔记](https://notesdown.netlify.com/)
 
-  [![XiangyunHuang/notesdown - GitHub](https://gh-card.dev/repos/XiangyunHuang/notesdown.svg)](https://github.com/XiangyunHuang/notesdown)
+- [现代统计图形](https://github.com/XiangyunHuang/MSG-Book)
 
 - [符号计算与R语言](https://github.com/XiangyunHuang/Symbolic-Computing)
 
