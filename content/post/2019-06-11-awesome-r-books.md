@@ -242,6 +242,8 @@ description: "书单覆盖机器学习、统计图形、数据科学与R语言�
 
 1. Mathematics for Machine Learning <https://mml-book.github.io/> [PDF下载](https://mml-book.github.io/book/mml-book.pdf)
 
+1. Multivariate Kernel Smoothing and Its Applications 多元核平滑及其应用 
+   <http://www.mvstat.net/mvksa/> [PDF 下载](http://www.mvstat.net/mvksa/mvksa.pdf)
 
 # 8. 学习 Python
 

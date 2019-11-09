@@ -124,6 +124,30 @@ grid.arrange(p1, p2)
 
 ![2005 年至 2010 年世界6级以上地震情况](https://wp-contents.netlify.com/2019/07/earthquake-world-subset-boxplot-violin.png)
 
+```r
+library(MSG)
+data(quake6)
+library(ggplot2)
+library(ggthemes)
+library(data.table)
+
+week.abb <- c('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
+month.abb <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+quake6 <- transform(quake6, date = paste(year, month, day, sep = "-"))
+quake6$week <- week(quake6$date)
+quake6$weekdays <- factor(wday(quake6$date), labels = week.abb)
+
+pdf(file = "mag.pdf", width = 16, height = 8)
+ggplot(quake6, aes(x = week, y = weekdays, fill = magnitude)) +
+    scale_fill_viridis_c(name="magnitude", option = "C", limits = range(quake6$magnitude)) +
+    geom_tile(color = "white", size = 0.4) +
+    facet_wrap("year", ncol = 5) +
+    scale_x_continuous(expand = c(0, 0), breaks = seq(1, 52, length = 12), labels = month.abb)+
+    theme_tufte()
+dev.off()
+```
 
 ## 中国近年来的地震情况
 
